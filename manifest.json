@@ -1,0 +1,27 @@
+{
+  "name": "Have Fun",
+  "short_name": "Have Fun",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/icon-72x72.png",
+      "type": "image/png", "sizes": "72x72"
+    },
+    {
+      "src": "/images/icon-128x128.png",
+      "type": "image/png","sizes": "128x128"
+    },
+    {
+      "src": "/images/icon-152x152.png",
+      "type": "image/png", "sizes": "152x152"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "type": "image/png", "sizes": "512x512"
+    }
+  ]
+}

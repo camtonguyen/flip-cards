@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="apple-mobile-web-app-status-bar" content="#fff" />
+    <meta name="theme-color" content="#fff" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
+
+    <link rel="icon" type="image/png" href="images/icon-152x152.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Have Fun</title>
+  </head>
+  <body>
+    <main>
+      <button id="clear" class="clear btn">
+        <i class="fas fa-trash"></i> Xoá Thẻ
+      </button>
+
+      <h1>
+        Dễ quá mà!!! 🤪
+        <button id="show" class="btn btn-small">
+          <i class="fas fa-plus"></i> Thêm thẻ
+        </button>
+      </h1>
+
+      <div id="cards-container" class="cards">
+      </div>
+
+      <div class="navigation">
+        <button id="prev" class="nav-button">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+
+        <p id="current"></p>
+
+        <button id="next" class="nav-button">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div id="add-container" class="add-container">
+        <h1>
+          Thêm thẻ mới
+          <button id="hide" class="btn btn-small btn-ghost">
+            <i class="fas fa-times"></i>
+          </button>
+        </h1>
+
+        <div class="form-group">
+          <textarea id="question" rows="2" placeholder="Điền từ đây nè! 👻"></textarea>
+        </div>
+
+        <div class="form-group">
+          <textarea id="answer" rows="7" placeholder="Chỗ này cho gợi ý! 👌"></textarea>
+        </div>
+
+        <button id="add-card" class="btn">
+          <i class="fas fa-plus"></i> Xong
+        </button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
