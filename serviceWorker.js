@@ -6,18 +6,29 @@ const assets = [
   "/script.js",
 ]
 
-self.addEventListener("install", installEvent => {
-  installEvent.waitUntil(
-    caches.open(staticFlipCard).then(cache => {
-      cache.addAll(assets)
+// install event
+self.addEventListener('install', evt => {
+  evt.waitUntil(
+    caches.open(staticFlipCard).then((cache) => {
+      console.log('caching shell assets');
+      cache.addAll(assets);
     })
-  )
-});
-
-self.addEventListener("fetch", fetchEvent => {
-  fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then(res => {
-      return res || fetch(fetchEvent.request)
+  );
+});// activate event
+self.addEventListener('activate', evt => {
+  evt.waitUntil(
+    caches.keys().then(keys => {
+      return Promise.all(keys
+        .filter(key => key !== staticFlipCard)
+        .map(key => caches.delete(key))
+      );
     })
-  )
+  );
+});// fetch event
+self.addEventListener('fetch', evt => {
+  evt.respondWith(
+    caches.match(evt.request).then(cacheRes => {
+      return cacheRes || fetch(evt.request);
+    })
+  );
 });
